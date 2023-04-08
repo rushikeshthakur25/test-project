@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #f7f8fc;
+            font-family: "Roboto", sans-serif;
+            color: #10182f;
+        }
+
+        .container {
+            display: flex;
+            width: 1040px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+            height: auto;
+        }
+
+
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            min-height: 250px;
+        }
+
+        .tag {
+            background: #cccccc;
+            border-radius: 50px;
+            font-size: 12px;
+            margin: 0;
+            color: #fff;
+            padding: 2px 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .tag-teal {
+            background-color: #47bcd4;
+            height: 20px;
+        }
+
+        .tag-teal1 {
+            background-color: #47bcd4;
+
+        }
+
+        .tag-teal1:hover {
+            background-color: #033b46;
+            color: #f7f8fc;
+        }
+
+        .tag-teal2 {
+            /* background-color: #85e886; */
+            background-color: #10182f;
+            /* font-size: 5px; */
+            /* margin-bottom: 0px; */
+            /* float: right; */
+            margin-right: 80px;
+            position: relative;
+
+        }
+
+        .tag-teal3 {
+            background-color: #045706;
+            font-size: 15px;
+        }
+
+        .card-body p {
+            margin: 0 0 40px;
+
+        }
+
+        .card-body #p {
+            margin-left: 65px;
+            width: auto;
+
+        }
+
+        .card-body h4 {
+            font-size: 15px;
+            /* margin: 0 0 40px; */
+        }
+
+        .user {
+            display: flex;
+            margin-top: auto;
+            align-items: center;
+            margin-left: 65px;
+
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            color: aliceblue;
+            width: 100px;
+        }
+
+        button:hover {
+            color: #f7f8fc;
+
+        }
+
+        .dis {
+            display: flex;
+        }
+        ul li{
+            list-style-type: circle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% for a in c%}
+        <div class="card">
+            <div class="card-body">
+                <div class="dis">
+                    <span class="tag tag-teal">{{a.packaeges_name}}
+                    </span>
+                    <p id="p" class="tag tag-teal2">
+                        SAVE {{a.packaeges_offer}}%
+                    </p>
+                </div>
+                <h4>
+                    <ul>
+                        <li style="list-style-type: none;line-height: 230%;">
+                            {{a.service|linenumbers|linebreaks}}
+
+                        </li>
+                        
+                      
+                            
+                    </ul>
+                </h4>
+                <p class="tag tag-teal3">
+                    Rs {{a.packaeges_price}}
+                </p>
+                <!-- <p class="tag tag-teal2">
+                    SAVE {{a.packaeges_offer}}%
+                </p> -->
+                <div class="user">
+                    <div class="tag tag-teal1">
+                        <a href="{% url 'chekoutform'%}">
+                        <button >Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <!-- <script>
+            function function1(){
+                var ul = document.getElementById("list");
+                var li = document.getElementById("li");
+                li.appendChild(document.createTextNode("Element 4"))
+
+            }
+        </script> -->
+
+</body>
+
+</html>
