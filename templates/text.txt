@@ -1,0 +1,30 @@
+//     function sendmail(){
+    //         var name =$ ( '#name').val();
+    //         var email = $('#email').val();
+    //         var sub = $('#contact').val();
+    //         var msg = $('#message').val();
+
+    //         var Body = 'Name: '+name+'<br> Email:'+email+'<br>Subject:'+sub+'<br>Message:'+msg;
+        
+    //     Email.send({
+    //         Host :"smtp.elasticemail.com",
+    //         Username :"ajaykumawat450@gamil.com",
+    //         Password :"3C5A7C065DDF37F8F381FA8B56FA7FBA12DF",
+    //         To:  "mayursali396@gmail.com",
+    //         From : "ajaykumawat450@gamil.com",
+    //         Subject:"This is the subject",
+    //         Body :Body
+
+    //     }).then(
+    //         message =>{
+    //             if(message=='Ok'){
+    //                 alert('Your mail has been sent');
+    //             }
+    //             else{
+    //                 console.error(message);
+    //                 alert('Retry')
+    //             }
+    //         }
+    //     );
+    //     }
+    // 

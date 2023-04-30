@@ -31,6 +31,7 @@ class Service_category(models.Model):
         return self.service_category
 
 class Product(models.Model): 
+    product_img = models.ImageField(upload_to = 'profile') 
     product_name = models.CharField(max_length=20)
     product = models.ForeignKey(Product_category, on_delete=models.CASCADE)
     product_desc = models.CharField(max_length=20)
@@ -50,7 +51,6 @@ class Appointment(models.Model):
     client_address = models.CharField(max_length=20)
     client_mobile = models.CharField(max_length=20)
     client_email = models.CharField(max_length=20)
-    service = models.ForeignKey(Service_category, on_delete=models.CASCADE)
     appointment_date = models.DateField()
     appointment_time = models.TimeField()
     def __str__(self) -> str:
@@ -83,9 +83,15 @@ class Academy(models.Model):
     course_trainer = models.CharField(max_length=20)
     course_about = models.CharField(max_length=50)
     def __str__(self ) -> str:
-        return self.course_name
+        return self.course_name                       
 
-class Certificate(models.Model):
-    name = models.CharField(max_length=20)
-    duration = models.CharField(max_length=20)
-    # academy = ForeignKey(Academy,on_delete=models.CASCADE,default='1',relatead_name='academy')    
+class Blog(models.Model):
+    bname = models.CharField(max_length=50)    
+    btitle = models.CharField(max_length=50)
+    dname = models.TextField()
+    uname = models.CharField(max_length=50)
+    date = models.DateField()
+    image = models.ImageField(upload_to='profile')
+
+    def __str__(self) ->str:
+        return self.bname

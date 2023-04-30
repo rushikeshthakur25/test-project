@@ -1,0 +1,111 @@
+.wel {
+    text-align: center;
+    color: #EC5598;
+    font-size: 40px;
+}
+
+.con {
+    text-align: center;
+    font-weight: bold;
+    color: gray
+}
+
+#gb {
+    background-image: url(bg-1.png);
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.nae {
+
+    border-radius: 50%;
+}
+
+.beauty {
+    margin-left: 160px;
+    background-color: gainsboro;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+}
+
+.tx {
+    color: #3f3e3e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#bt {
+    background-color: #3f3e3e;
+    margin-bottom: 20px;
+}
+
+#b {
+    background-color: #EC5598;
+    margin-bottom: 20px;
+}
+
+#al {
+    background-color: antiquewhite;
+}
+.lig{
+    background-color: white;
+    padding: 40px 30px 40px 90px;
+}
+
+.bn {
+    background-color: black;
+    width: 20%;
+    height: 70px;
+    padding: 8px;
+}
+
+.te {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+#cus{
+    background-color:ghostwhite;
+}
+
+.sed {
+    background-color: cornsilk;
+}
+
+html,
+body,
+div {
+    padding: 0;
+    margin: 0;
+}
+
+#cen {
+    font-size: 4em !important;
+    margin-top: 10%;
+    color: #EC5598;
+    
+}
+.say{
+    border-radius: 50%;
+    width: 20%;
+    height: 55px;
+}
+
+h1 {
+    padding-top: 30px;
+    color: white !important;
+}
+
+h2 {
+    color: teal;
+}
+
+.intro {
+    height: auto;
+    min-height: 50vh;
+    text-align: center;
+    background-color: cornsilk;
+}
