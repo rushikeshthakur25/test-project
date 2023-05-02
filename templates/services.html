@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    {%block body_block%}
     <style>
         * {
             box-sizing: border-box;
@@ -44,6 +45,7 @@
 
         .description {
             white-space: wrap;
+            color: #fcfcfc;
         }
 
         a {
@@ -67,7 +69,9 @@
             flex-basis: 100%;
             position: relative;
             padding: 24px;
-            background: #fff;
+            background: #988080;
+            box-shadow: #000;
+            border-radius: 5%;
         }
 
         .box-top {
@@ -97,7 +101,7 @@
         }
 
         .user-follow-info {
-            color: hsl(0, 0%, 60%);
+            color: hsl(0, 22%, 95%);
         }
 
         .button {
@@ -109,8 +113,9 @@
             padding: 16px;
             color: #000;
             background: transparent;
-            box-shadow: 0px 0px 0px 1px black inset;
+            box-shadow: 0px 0px 0px 1px rgb(248, 245, 245) inset;
             transition: background 0.4s ease;
+            border-radius: 30%;
         }
 
         .button:hover {
@@ -216,7 +221,6 @@
 </head>
 
 <body>
-    <h1>Courses</h1>
     {% for i in a%}
 
     <div class="top">
@@ -233,11 +237,12 @@
                     <p class="description">{{i.course_about}}</p>
                     <p class="description">{{i.course_duration}}</p>
                 </div>
-                <a href="#" class="button">Buy Now</a>
+                <a href="{% url 'chekoutform'%}" class="button">Buy Now</a>
             </div>
         </div>
     </div>
     {%endfor%}
 </body>
+{%endblock%}
 
 </html>

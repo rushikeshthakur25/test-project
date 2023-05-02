@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {%block body_block%}
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+        
         * {
             box-sizing: border-box;
         }
 
-        body {
+        .a {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0;
-            background-color: #f7f8fc;
+            /* background-color: #f7f8fc; */
             font-family: "Roboto", sans-serif;
             color: #10182f;
         }
-
+        
         .container {
             display: flex;
             width: 1040px;
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
-
+        
         .card {
             margin: 10px;
             background-color: #fff;
@@ -39,7 +41,7 @@
             width: 300px;
             height: auto;
         }
-
+        
 
 
         .card-body {
@@ -61,22 +63,22 @@
             text-transform: uppercase;
             cursor: pointer;
         }
-
+        
         .tag-teal {
             background-color: #47bcd4;
             height: 20px;
         }
-
+        
         .tag-teal1 {
             background-color: #47bcd4;
-
+            
         }
-
+        
         .tag-teal1:hover {
             background-color: #033b46;
             color: #f7f8fc;
         }
-
+        
         .tag-teal2 {
             /* background-color: #85e886; */
             background-color: #10182f;
@@ -85,38 +87,38 @@
             /* float: right; */
             margin-right: 80px;
             position: relative;
-
+            
         }
 
         .tag-teal3 {
             background-color: #045706;
             font-size: 15px;
         }
-
+        
         .card-body p {
             margin: 0 0 40px;
-
+            
         }
-
+        
         .card-body #p {
             margin-left: 65px;
             width: auto;
-
+            
         }
-
+        
         .card-body h4 {
             font-size: 15px;
             /* margin: 0 0 40px; */
         }
-
+        
         .user {
             display: flex;
             margin-top: auto;
             align-items: center;
             margin-left: 65px;
-
+            
         }
-
+        
         button {
             border: none;
             background-color: transparent;
@@ -133,12 +135,15 @@
             display: flex;
         }
         ul li{
-            list-style-type: circle;
+            /* list-style-type: circle; */
         }
-    </style>
+        </style>
 </head>
 
 <body>
+    <div class="a">
+
+   
     <div class="container">
         {% for a in c%}
         <div class="card">
@@ -185,7 +190,7 @@
 
             }
         </script> -->
-
+    </div>
 </body>
-
+{%endblock%}
 </html>
